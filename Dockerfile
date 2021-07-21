@@ -2,7 +2,7 @@ FROM alpine:3.14
 
 RUN set -x \
     && apk add --no-cache --virtual .build-deps curl \
-    && curl "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=jhupDXHPpm5TV0WV&suffix=tar.gz" -o GeoLite2-City.tar.gz \
+    && curl "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=XXXXXXXXX&suffix=tar.gz" -o GeoLite2-City.tar.gz \
     && tar -xzvf GeoLite2-City.tar.gz \
     && mkdir -p /usr/share/geoip/ \
     && mv GeoLite2-City_*/GeoLite2-City.mmdb /usr/share/geoip/GeoLite2-City.mmdb
